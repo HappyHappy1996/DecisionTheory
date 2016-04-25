@@ -44,12 +44,21 @@ public class WinMatrix {
 
 	public double findOptimalSolveByLaplace() {
 		return mathematicalExpectations.stream()
-				.max(Comparator.comparingDouble(value -> value)).get();
+				.max(Comparator.comparingDouble(value -> value))
+				.get();
 	}
 	
 	public double findOptimalSolveByWald() {
 		return packets.stream()
 				.map(packet -> packet.min())
-				.max(Comparator.comparingDouble(value -> value)).get();
+				.max(Comparator.comparingDouble(value -> value))
+				.get();
+	}
+	
+	public double findOptimalSolveByGurwits(double pessimismCoef) {
+		return packets.stream()
+				.map(packet -> pessimismCoef * packet.min() + pessimismCoef * packet.max())
+				.max(Comparator.comparingDouble(value -> value))
+				.get();
 	}
 }

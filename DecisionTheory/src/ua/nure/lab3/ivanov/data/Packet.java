@@ -27,7 +27,15 @@ public class Packet {
 	}
 	
 	public Double min() {
-		return values.stream().min(Comparator.comparingDouble(value -> value)).get();
+		return values.stream()
+				.min(Comparator.comparingDouble(value -> value))
+				.get();
+	}
+	
+	public Double max() {
+		return values.stream()
+				.max(Comparator.comparingDouble(value -> value))
+				.get();
 	}
 
 	public String toString() {

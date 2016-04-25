@@ -33,6 +33,14 @@ public class Demo {
 		System.out.println("== Wald " + solution + " ==");
 		System.out.println("======================================");
 		
+		/*
+		 * Gurwits
+		 */
+		solution = matrix.findOptimalSolveByGurwits(0.6);
+		System.out.println("======================================");
+		System.out.println("== Gurwits " + solution + " ==");
+		System.out.println("======================================");
+		
 	}
 
 }
