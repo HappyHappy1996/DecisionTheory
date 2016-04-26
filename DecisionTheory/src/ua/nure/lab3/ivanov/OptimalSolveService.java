@@ -27,7 +27,7 @@ public class OptimalSolveService {
 				.get();
 	}
 	
-	public static double findOptimalSolveBySewidge(RiskMatrix riskMatrix) {
+	public static double findOptimalSolveBySavage(RiskMatrix riskMatrix) {
 		return riskMatrix.getPackets().stream()
 				.map(packet -> packet.max())
 				.min(Comparator.comparingDouble(value -> value))

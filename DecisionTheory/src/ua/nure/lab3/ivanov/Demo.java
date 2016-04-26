@@ -54,9 +54,9 @@ public class Demo {
 		/*
 		 * Sewidge
 		 */
-		solution = OptimalSolveService.findOptimalSolveBySewidge(riskMatrix);
+		solution = OptimalSolveService.findOptimalSolveBySavage(riskMatrix);
 		System.out.println("======================================");
-		System.out.println("== Gurwits " + solution + " ==");
+		System.out.println("== Savage " + solution + " ==");
 		System.out.println("======================================");
 		
 	}

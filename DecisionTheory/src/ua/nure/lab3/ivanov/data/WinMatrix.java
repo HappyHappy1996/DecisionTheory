@@ -1,9 +1,7 @@
 package ua.nure.lab3.ivanov.data;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 
 public class WinMatrix extends Matrix {
 
