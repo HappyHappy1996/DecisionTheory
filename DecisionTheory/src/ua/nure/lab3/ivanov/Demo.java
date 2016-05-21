@@ -37,7 +37,7 @@ public class Demo {
 		/*
 		 * Gurwits
 		 */
-		solution = OptimalSolveService.findOptimalSolveByGurwits(winMatrix, 0.6);
+		solution = OptimalSolveService.findOptimalSolveByGurwits(winMatrix, 0.5);
 		System.out.println("======================================");
 		System.out.println("== Gurwits " + solution + " ==");
 		System.out.println("======================================");
@@ -58,6 +58,7 @@ public class Demo {
 		System.out.println("======================================");
 		System.out.println("== Savage " + solution + " ==");
 		System.out.println("======================================");
+		
 		
 	}
 

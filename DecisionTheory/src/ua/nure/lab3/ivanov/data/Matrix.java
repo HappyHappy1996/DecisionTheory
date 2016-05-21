@@ -9,13 +9,19 @@ public class Matrix {
 	protected int packetsCount;
 	protected int scenariosCount;
 	protected List<Packet> packets;
+	private boolean isEmpty;
 
 	public Matrix(Packet... packets) {
-		packetsCount = packets.length;
-		this.packets = new ArrayList<Packet>(packetsCount);
-		scenariosCount = Objects.requireNonNull(packets[0]).getSize();
+		if (Objects.nonNull(packets)) {
+			isEmpty = false;
+			packetsCount = packets.length;
+			this.packets = new ArrayList<Packet>(packetsCount);
+			scenariosCount = Objects.requireNonNull(packets[0]).getSize();
+		} else {
+			isEmpty = true;
+		}
 	}
-	
+
 	public void print() {
 		System.out.println("Packets count : " + packetsCount);
 		System.out.println("Scenarios count : " + scenariosCount);
@@ -34,4 +40,8 @@ public class Matrix {
 		return packets;
 	}
 	
+	public boolean nonEmpty() {
+		return !isEmpty;
+	}
+
 }

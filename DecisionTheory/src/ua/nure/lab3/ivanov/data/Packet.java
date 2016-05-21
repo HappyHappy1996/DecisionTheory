@@ -6,12 +6,10 @@ import java.util.List;
 
 public class Packet {
 
-	private int size;
 	private List<Double> values;
 	
 	public Packet(double... values) {
-		size = values.length;
-		this.values = new ArrayList<Double>(size);
+		this.values = new ArrayList<Double>(values.length);
 		
 		for (int i = 0; i < values.length; i++) {
 			this.values.add(values[i]);
@@ -19,7 +17,7 @@ public class Packet {
 	}
 
 	public int getSize() {
-		return size;
+		return values.size();
 	}
 
 	public List<Double> getValues() {
